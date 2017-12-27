@@ -579,15 +579,3 @@ function my_login_logo() { ?>
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 add_action('admin_menu', 'remove_built_in_roles');
-
-function remove_built_in_roles() {
-    global $wp_roles;
-
-    $roles_to_remove = array('subscriber', 'contributor', 'author', 'editor');
-
-    foreach ($roles_to_remove as $role) {
-        if (isset($wp_roles->roles[$role])) {
-            $wp_roles->remove_role($role);
-        }
-    }
-}
