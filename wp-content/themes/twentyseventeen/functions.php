@@ -564,3 +564,16 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+          height:65px;
+          width:320px;
+          background-size: 320px 65px;
+          background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
