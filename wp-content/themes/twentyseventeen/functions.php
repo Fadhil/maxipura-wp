@@ -577,5 +577,3 @@ function my_login_logo() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
-add_action('admin_menu', 'remove_built_in_roles');
